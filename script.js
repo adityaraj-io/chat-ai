@@ -5,11 +5,11 @@ const themeButton = document.querySelector("#theme-btn");
 const deleteButton = document.querySelector("#delete-btn");
 
 let userText = null;
-const API_KEY = "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"; 
+const API_KEY = process.env.API_KEY; 
 
 const loadDataFromLocalstorage = () => {
     const themeColor = localStorage.getItem("themeColor");
-
+    console.log(API_KEY)
     document.body.classList.toggle("light-mode", themeColor === "light_mode");
     themeButton.innerText = document.body.classList.contains("light-mode") ? "dark_mode" : "light_mode";
 
