@@ -9,7 +9,7 @@ const API_KEY = process.env.API_KEY;
 
 const loadDataFromLocalstorage = () => {
     const themeColor = localStorage.getItem("themeColor");
-    console.log(API_KEY)
+    console.log(API_KEY+" hello")
     document.body.classList.toggle("light-mode", themeColor === "light_mode");
     themeButton.innerText = document.body.classList.contains("light-mode") ? "dark_mode" : "light_mode";
 
