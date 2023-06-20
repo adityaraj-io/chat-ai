@@ -9,7 +9,6 @@ const API_KEY = "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";
 
 const loadDataFromLocalstorage = () => {
     const themeColor = localStorage.getItem("themeColor");
-
     document.body.classList.toggle("light-mode", themeColor === "light_mode");
     themeButton.innerText = document.body.classList.contains("light-mode") ? "dark_mode" : "light_mode";
 
